@@ -2,7 +2,7 @@
 %define plugin	archive
 %define name	vdr-plugin-%plugin
 %define version	0.0.2
-%define rel	15
+%define rel	16
 
 Summary:	VDR plugin: Multimedia-Archive
 Name:		%name
@@ -13,7 +13,7 @@ License:	GPL
 URL:		http://schwatke.net/
 Source:		vdr-%plugin-%version.tar.bz2
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	vdr-devel >= 1.4.1-6
+BuildRequires:	vdr-devel >= 1.6.0
 Requires:	vdr-abi = %vdr_abi
 Requires(pre):	rpm-helper
 
@@ -24,6 +24,7 @@ Recorder.
 %prep
 %setup -q -n %plugin-%version
 rm scripts/new_entry scripts/sort_archive
+%vdr_plugin_prep
 
 %build
 %vdr_plugin_build
