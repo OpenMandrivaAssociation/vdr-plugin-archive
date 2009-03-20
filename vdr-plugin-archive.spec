@@ -12,6 +12,7 @@ Group:		Video
 License:	GPL
 URL:		http://schwatke.net/
 Source:		vdr-%plugin-%version.tar.bz2
+Patch0:		archive-includes.patch
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.6.0
 Requires:	vdr-abi = %vdr_abi
@@ -23,6 +24,7 @@ Recorder.
 
 %prep
 %setup -q -n %plugin-%version
+%patch0 -p1
 rm scripts/new_entry scripts/sort_archive
 %vdr_plugin_prep
 
