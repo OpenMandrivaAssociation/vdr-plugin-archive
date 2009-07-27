@@ -2,7 +2,7 @@
 %define plugin	archive
 %define name	vdr-plugin-%plugin
 %define version	0.0.2
-%define rel	18
+%define rel	19
 
 Summary:	VDR plugin: Multimedia-Archive
 Name:		%name
