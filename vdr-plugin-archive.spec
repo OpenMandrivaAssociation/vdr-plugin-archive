@@ -1,13 +1,9 @@
-
 %define plugin	archive
-%define name	vdr-plugin-%plugin
-%define version	0.0.2
-%define rel	20
 
 Summary:	VDR plugin: Multimedia-Archive
-Name:		%name
-Version:	%version
-Release:	%mkrel %rel
+Name:		vdr-plugin-%plugin
+Version:	0.0.2
+Release:	21
 Group:		Video
 License:	GPL
 URL:		http://schwatke.net/
@@ -34,7 +30,6 @@ g++ %optflags -o new_entry new_entry.cc
 g++ %optflags -o sort_archive sort_archive.cc
 
 %install
-rm -rf %{buildroot}
 %vdr_plugin_install
 
 install -d -m755 %{buildroot}%{vdr_plugin_cfgdir}/%plugin
@@ -44,10 +39,6 @@ touch %{buildroot}%{vdr_plugin_cfgdir}/%{plugin}/archive
 
 %post
 %create_ghostfile %{vdr_plugin_cfgdir}/%{plugin}/archive vdr vdr 644
-%vdr_plugin_post %plugin
-
-%postun
-%vdr_plugin_postun %plugin
 
 %files -f %plugin.vdr
 %defattr(-,root,root)
