@@ -3,7 +3,7 @@
 Summary:	VDR plugin: Multimedia-Archive
 Name:		vdr-plugin-%plugin
 Version:	0.0.2
-Release:	22
+Release:	23
 Group:		Video
 License:	GPL
 URL:		http://schwatke.net/
