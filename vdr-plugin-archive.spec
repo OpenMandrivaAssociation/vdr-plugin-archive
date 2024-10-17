@@ -6,7 +6,7 @@ Version:	0.0.2
 Release:	23
 Group:		Video
 License:	GPL
-URL:		http://schwatke.net/
+URL:		https://schwatke.net/
 Source:		vdr-%plugin-%version.tar.bz2
 Patch0:		archive-includes.patch
 BuildRequires:	vdr-devel >= 1.6.0
